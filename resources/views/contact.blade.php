@@ -13,18 +13,18 @@
 
     <x-app-layout>
     <div class="hero2">
-            <h1 class="titre_services">The Secret Beauty</h1>
+            <h1 class="titre_services">White Beauty</h1>
             <h2 class="sous_titre_service">Contact</h2>
         </div>
 
         <main class="contact">
             <div class="intro_contact">
-                <h2>Restons en contact</h2>
+                <h2 class="titre_service"><strong>Restons en contact</strong></h2>
                 <p>Dans le cadre d'une amélioration continue de nos services, <br>nous sommes disponible via ce formulaire afin de répondre à toutes vos autres. </p>
             </div>
             
             <div class="form-container">
-                <h2>Le formulaire</h2>
+                <h2 class="titre_service">Le formulaire</h2>
                 <form action="#" method="post">
                     <div>
                         <label for="nom">Nom</label>

@@ -32,11 +32,11 @@
 
 <main class="qsn">
     <!-- Contenu de la page "Qui sommes-nous ?" -->
-    <h2 class="titre_qsn">Qui sommes-nous ?</h2>
+    <h2 class="titre_qsn"><strong>Qui sommes-nous ?</strong></h2>
 
     <div class="qsn_1">
     <div class="qsn_texte">
-            <h2>Notre histoire</h2>
+            <h2 class="titre_service">Notre histoire</h2>
             <div class="espaceur_2"></div>
             <p class="qsn_description">Notre approche du Soin Esthétique sur mesure repose sur l'alliance
                 parfaite du savoir-faire, de la haute technologie et de la cosmétique active.
@@ -74,7 +74,7 @@
 
     <div class="qsn_4">
         <div class="qsn_4_gauche">
-            <p class="qsn_bandeau_titre">Quelques chiffres</p>
+            <p class="qsn_bandeau_titre"><strong>Quelques chiffres</strong></p>
         </div>
         <div class="qsn_4_droite">
             <p class="qsn_bandeau_texte">+ 350 clients satisfaits</p>

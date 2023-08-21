@@ -39,7 +39,7 @@
     
     <section class="service">
             <div class="service-content">
-                <h2>Le Blanchiment Dentaire</h2>
+                <h2 class="titre_service">Le Blanchiment Dentaire</h2>
                 <p>Profitez d'un sourire éclatant et confiant grâce à notre traitement de blanchiment dentaire professionnel. Nos experts utilisent des techniques avancées pour éliminer les taches et la décoloration, vous laissant avec des dents visiblement plus blanches et rayonnantes. Révélez la beauté de votre sourire avec notre service de blanchiment dentaire sûr et efficace.</p>
             </div>
             <div class="service-img">
@@ -53,7 +53,7 @@
                 <img src="../img/service2.jpg" alt="Presso Thérapie">
             </div>
             <div class="service-content">
-                <h2>La Presso Thérapie</h2>
+                <h2 class="titre_service">La Presso Thérapie</h2>
                 <p>Offrez à votre corps un moment de relaxation totale avec notre service de presso thérapie. Cette méthode de massage pneumatique doux aide à stimuler la circulation sanguine, à réduire la sensation de jambes lourdes et à favoriser l'élimination des toxines. Plongez dans un état de détente profonde pendant que notre technologie de pointe prend soin de votre bien-être physique.</p>
             </div>
             <div class="espaceur"></div>
@@ -61,7 +61,7 @@
         </section>
         <section class="service">
             <div class="service-content">
-                <h2>Nos Soins Hydra Facial</h2>
+                <h2 class="titre_service">Nos Soins Hydra Facial</h2>
                 <p>Redonnez à votre peau son éclat naturel avec nos soins hydra facial revitalisants. Ce traitement complet combine le nettoyage en profondeur, l'exfoliation douce, l'extraction des impuretés et l'hydratation intense pour une peau parfaitement équilibrée et revitalisée. Laissez notre équipe d'experts choyer votre visage et vous offrir une expérience de soin exceptionnelle.</p>
             </div>
             <div class="service-img">
