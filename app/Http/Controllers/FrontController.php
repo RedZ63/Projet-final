@@ -7,9 +7,9 @@ use App\Models\Post;
 
 class FrontController extends Controller
 {
-    public function welcome() 
+    public function accueil() 
     {
-    	$post = Post::latest()->limit(3)->get();
-    	return view('/accueil', compact('post'));
+    	$posts = Post::latest()->limit(3)->get();
+    	return view('/accueil', compact('posts'));
     }
 }

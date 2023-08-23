@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Category;
@@ -16,23 +17,17 @@ class PostController extends Controller
     {
         $posts = Post::with('category', 'user')->latest()->get();
 
-        return view('post.index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $categories = Category::All();
 
 
-        return view('post.create', compact('categories'));
+        return view('posts.create', compact('categories'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(StorePostRequest $request)
     {
         $imageName = $request->image->store('posts');
@@ -50,23 +45,21 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('post.show', compact('post'));
-    }
+        $comments = $post->comments()->with('user')->latest()->get();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+        return view('posts.show', compact('post', 'comments'));
+        
+    }
+   
     public function edit(Post $post)
     {
 
         $categories = Category::All();
 
-        return view('post.edit', compact('post','categories'));
+        return view('posts.edit', compact('post','categories'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+ 
     public function update(StorePostRequest $request, Post $post)
     {
 
@@ -88,9 +81,7 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success', 'Votre post a été modifié');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(Post $post)
     {
         $post->delete();

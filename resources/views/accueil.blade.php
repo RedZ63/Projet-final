@@ -163,9 +163,9 @@
 
                 <div class="espaceur"></div>
 
-                @if ($post->isNotEmpty())
+             
                     <ul class= "articles_accueil">
-                        @foreach ($post as $post)
+                        @foreach ($posts as $post)
                             <li class= "articles_accueil">
                                 <div class= "articles_accueil">
                                     <h3 class="">{{ Str::limit($post->title, 40) }}</h3>
@@ -177,7 +177,7 @@
                             </li>
                         @endforeach
                     </ul>
-                @endif
+            
 
             </div>
             <!-- Footer -->

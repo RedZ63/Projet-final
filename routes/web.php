@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,16 +18,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function() {
-    return view('/accueil');
-});
+Route::get('/posts/show{post}', [PostController::class, 'show'])
+->name('posts.show');
+
+
 
 Route::get('/blog', [PostController::class, 'index'])
     ->name('posts.index');
 
-Route::get('/',  [FrontController::class, 'welcome'], function() {
-    return view('/accueil');
-});
+    Route::get('/', [FrontController::class, 'accueil'])
+    ->name('/accueil');
+
 
 
 Route::get('qsn', function() {
@@ -46,18 +48,18 @@ Route::get('parrainage', function() {
     return view('/parrainage');
 });
 
-Route::get('accueil', function() {
-    return view('/accueil');
-});
 
 
 Route::middleware(['auth'])->group(function() {
 
     Route::resource('posts', PostController::class)
-    ->except('index');
+    ->except(['index','show']);
 
    
-
+    Route::resource('comments', CommentController::class)
+    ->only(['index', 'edit', 'update', 'destroy'])
+        ->middleware(['auth', 'verified']);
+    Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
    
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
