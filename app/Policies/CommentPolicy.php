@@ -11,7 +11,7 @@ use Illuminate\Auth\Access\Response;
 class CommentPolicy
 {
     /**
-     * Determine whether the user can view any models.
+     * Déterminer si l'utilisateur peut visualiser des modèles.
      */
     public function viewAny(User $user): bool
     {
@@ -19,7 +19,7 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the user can view the model.
+     * Déterminer si l'utilisateur peut visualiser le modèle.
      */
     public function view(User $user, Comment $comment): bool
     {
@@ -27,7 +27,7 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the user can create models.
+     * Déterminer si l'utilisateur peut créer des modèles.
      */
     public function create(User $user): bool
     {
@@ -35,16 +35,16 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the user can update the model.
+     * Déterminer si l'utilisateur peut mettre à jour le modèle.
      */
-    public function update(User $user,Comment $comment): bool
+    public function update(User $user,Comment $comment): boolùm
     {
         return $comment->user()->is($user);
 
     }
 
     /**
-     * Determine whether the user can delete the model.
+     * Déterminer si l'utilisateur peut supprimer le modèle.
      */
     public function delete(User $user ,Comment $comment): bool
     {
@@ -52,7 +52,7 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the user can restore the model.
+     * Déterminer si l'utilisateur peut restaurer le modèle.
      */
     public function restore(User $user, Comment $comment): bool
     {
@@ -60,7 +60,7 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the user can permanently delete the model.
+     * Déterminer si l'utilisateur peut supprimer définitivement le modèle.
      */
     public function forceDelete(User $user, Comment $comment): bool
     {

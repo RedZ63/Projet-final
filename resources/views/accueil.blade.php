@@ -35,7 +35,7 @@
 
                 <div class="services">
                     <div class="service1">
-                        <img src="{{ url('/img/Service1.jpg') }}">
+                        <img src="{{ url('/img/Service1.jpg') }} alt="image de blanchiment dentaire">
                         <h2>Blanchiment dentaire</h2>
                     </div>
                     <div class="service2">
@@ -170,7 +170,7 @@
                                 <div class= "articles_accueil">
                                     <h3 class="">{{ Str::limit($post->title, 40) }}</h3>
                                     <img src="{{ asset('/storage/' . $post->image) }}" class="img_article">
-                                    <p style="color: black;margin-bottom:1rem;">{{ Str::limit($post->content, 75) }}
+                                        <p style="color: black;margin-bottom:1rem;width:75%;padding-left:10rem;">{{ Str::limit($post->content, 75) }}
                                     </p>
                                     <a href="{{ route('posts.show', $post) }}" class="bouton3">en savoir +</a>
                                 </div>

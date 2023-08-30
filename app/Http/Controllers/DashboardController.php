@@ -12,6 +12,6 @@ class DashboardController extends Controller
     $articles = auth()->user()->articles;
     $posts = auth()->user()->posts;
 
-    return view('/accueil', compact('articles','posts'));
+    return view('/dashboard', compact('articles','posts'));
     }
 }

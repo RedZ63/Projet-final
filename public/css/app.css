@@ -5,18 +5,104 @@
 /* LAYOUTS */
 
 /* HEADER */
-
-
-nav {
-    background-color: white;
-    color: #958B71;
-    position: fixed;
+.header {
+    position: sticky;
+    top: 0;
     width: 100%;
-    opacity: 90%;
-    height: 12vh;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: #ffffffc1;
     z-index: 1;
-    margin-bottom: 2rem;
-}
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .logo a span {
+    color: #8739fa;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: black;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .menu {
+      flex-direction: column;
+      background-color:white;
+      align-items: start;
+      position: absolute;
+      top: 12vh;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     
+    }
+  
+    .menu a {
+      margin-left: 12px;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      color: red;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .responsiv-nav{
+        margin-left:40%;
+    }
+  }
+  
 /* ////////////////////////////////// */
 .espaceur {
     height: 5vh;
@@ -49,6 +135,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     margin-top: 5rem;
+    padding-bottom: 0;
 }
 
 .footer-container {
@@ -65,7 +152,7 @@ footer {
 .map {
     flex: 1;
     margin-right: 20px;
-    margin-bottom: 20px;
+
 }
 
 .navigation h3,
@@ -306,7 +393,6 @@ p {
         border: none;
         border-bottom: solid 2px;
 
-        /* position: absolute; */
         bottom: 0;
         left: 20px;
 
@@ -818,6 +904,7 @@ form input[type="submit"] {
 
 /* @media querries */
 @media screen and (max-width: 768px) {
+    
     .contact {
         padding: 1rem;
     }
@@ -840,6 +927,11 @@ form input[type="submit"] {
         font-size: 2vh;
     }
 
+    
+    .articles_accueil p{
+        display:none;
+    }
+
     .partie_1 {
         margin-top: -50px;
     }
@@ -857,6 +949,7 @@ form input[type="submit"] {
 
     .baniere{
         width: 100%;
+        padding: 1rem;
     }
 
     .service1,
@@ -887,7 +980,8 @@ form input[type="submit"] {
     }
 
     .titre_partie_2 {
-        font-size: 4rem;
+        font-size: 3rem;
+        padding: 2rem;
     }
 
     .texte_partie_2 {

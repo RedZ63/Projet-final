@@ -10,9 +10,6 @@ use App\Models\Category;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $posts = Post::with('category', 'user')->latest()->get();
@@ -27,7 +24,7 @@ class PostController extends Controller
 
         return view('posts.create', compact('categories'));
     }
-    
+
     public function store(StorePostRequest $request)
     {
         $imageName = $request->image->store('posts');
@@ -37,12 +34,10 @@ class PostController extends Controller
             'image' => $imageName
         ]);
 
-        return redirect()->route('dashboard')->with('success','Votre post a été créé');
+        return redirect()->route('dashboard')->with('success','Votre actualité a été créée');
     }
 
-    /**
-     * Display the specified resource.
-     */
+   
     public function show(Post $post)
     {
         $comments = $post->comments()->with('user')->latest()->get();
@@ -78,7 +73,7 @@ class PostController extends Controller
 
         $post->update($arrayUpdate);
 
-        return redirect()->route('dashboard')->with('success', 'Votre post a été modifié');
+        return redirect()->route('dashboard')->with('success', 'Votre actualité a été modifiée');
     }
 
    
@@ -86,6 +81,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('dashboard')->with('success', 'Votre post a été supprimé');
+        return redirect()->route('dashboard')->with('success', 'Votre actualité a été supprimé');
     }
 }

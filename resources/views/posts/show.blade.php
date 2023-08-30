@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold">{{ $post->title }}</h2>
+        <h2 class="text-xl font-semibold mt-32 text-center">{{ $post->title }}</h2>
     </x-slot>
 
     <div class="mx-auto max-w-3xl">
@@ -50,16 +50,16 @@
                                     </x-slot>
                                     <x-slot name="content">
 
-                                        <!-- <x-dropdown-link :href="route('comments.edit', $comment)">
-                                            {{ __('Edit') }}
-                                        </x-dropdown-link> -->
+                                    <x-dropdown-link :href="route('comments.edit', $comment)">
+                                            {{ __('Editer') }}
+                                        </x-dropdown-link>
 
                                      {{-- <form action="{{ route('comments.store', ['post' => $post->id],'comments.destroy', $comment) }}" class="flex flex-col" method="POST"> --}}
                                         <form action="{{ route('comments.destroy', ['post' => $post->id, 'comment' => $comment->id]) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <x-dropdown-link :href="route('comments.destroy', $comment)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                {{ __('Delete') }}
+                                                {{ __('Supprimer') }}
                                             </x-dropdown-link>
                                         </form>
                             

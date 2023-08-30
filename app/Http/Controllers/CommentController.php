@@ -45,7 +45,7 @@ class CommentController extends Controller
             $comment->user_id = auth()->id();
             $comment->post_id = $post->id;
             $comment->save();
-            return redirect()->back()->with('success', 'Comment ajouté ');
+            return redirect()->back()->with('success', 'Commentaire ajouté ');
         } else {
             return redirect('/posts/show/' . $post->id);
         }
@@ -53,7 +53,7 @@ class CommentController extends Controller
     }
     
 
-
+// FONCTION EDITER /////////////////////////////////////////////////////////////////////////////////////
 
     public function edit(Comment $comment): View
     {
@@ -84,7 +84,7 @@ class CommentController extends Controller
 
         $comment->delete();
 
-        return redirect()->back()->with('success', 'Comment deleted ');
+        return redirect()->back()->with('success', 'Commentaire supprimé ');
     }
 }
 

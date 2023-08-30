@@ -44,11 +44,6 @@ Route::get('contact', function() {
     return view('/contact');
 });
 
-Route::get('parrainage', function() {
-    return view('/parrainage');
-});
-
-
 
 Route::middleware(['auth'])->group(function() {
 
@@ -57,7 +52,7 @@ Route::middleware(['auth'])->group(function() {
 
    
     Route::resource('comments', CommentController::class)
-    ->only(['index', 'edit', 'update', 'destroy'])
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
         ->middleware(['auth', 'verified']);
     Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
    
