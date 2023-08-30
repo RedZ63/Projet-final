@@ -16,13 +16,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
         rel="stylesheet" />
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <meta name="description" content=" Découvrez nos services de blanchiment dentaire, presso-thérapie et soins hydra-faciaux chez White Beauty. Explorez comment nous pouvons vous aider à atteindre un sourire radieux et une peau resplendissante grâce à nos traitements professionnels.">
 
 
     <!-- Styles -->
 
 </head>
 <x-app-layout>
-
+<div class="loader-container">
+    <div class="spinner"></div>
+    <img src="../img/loader.gif" class="logo" alt="Logo">
+</div>
     <body>
 
         <div class="hero2">
@@ -35,7 +39,7 @@
          <main class="services-page">
     <h1 class="titre_service">Nos Services</h1>
 
-    <p class="services_description">Découvrez nos offres de services et laissez-nous vous aider à révéler votre beauté intérieure et extérieure chez White Beauty. Chaque service est conçu pour vous offrir une expérience relaxante, rajeunissante et pleine de bienfaits pour votre corps et votre esprit.</p>
+    <p class="services_description" id="BD1">Découvrez nos offres de services et laissez-nous vous aider à révéler votre beauté intérieure et extérieure chez White Beauty. Chaque service est conçu pour vous offrir une expérience relaxante, rajeunissante et pleine de bienfaits pour votre corps et votre esprit.</p>
     
     <section class="service">
             <div class="service-content">
@@ -43,7 +47,7 @@
                 <p>Profitez d'un sourire éclatant et confiant grâce à notre traitement de blanchiment dentaire professionnel. Nos experts utilisent des techniques avancées pour éliminer les taches et la décoloration, vous laissant avec des dents visiblement plus blanches et rayonnantes. Révélez la beauté de votre sourire avec notre service de blanchiment dentaire sûr et efficace.</p>
             </div>
             <div class="service-img">
-                <img src="../img/service1.jpg" alt="Presso Thérapie">
+                <img src="../img/service1.jpg" alt="Blanchiment Dentaire" id="PT1">
             </div>
            <div class="espaceur"></div>
            <div class="espaceur"></div>
@@ -57,21 +61,21 @@
                 <p>Offrez à votre corps un moment de relaxation totale avec notre service de presso thérapie. Cette méthode de massage pneumatique doux aide à stimuler la circulation sanguine, à réduire la sensation de jambes lourdes et à favoriser l'élimination des toxines. Plongez dans un état de détente profonde pendant que notre technologie de pointe prend soin de votre bien-être physique.</p>
             </div>
             <div class="espaceur"></div>
-            <div class="espaceur"></div>
+            <div class="espaceur"id="HF1"></div>
         </section>
-        <section class="service">
+        <section class="service" >
             <div class="service-content">
                 <h2 class="titre_service">Nos Soins Hydra Facial</h2>
                 <p>Redonnez à votre peau son éclat naturel avec nos soins hydra facial revitalisants. Ce traitement complet combine le nettoyage en profondeur, l'exfoliation douce, l'extraction des impuretés et l'hydratation intense pour une peau parfaitement équilibrée et revitalisée. Laissez notre équipe d'experts choyer votre visage et vous offrir une expérience de soin exceptionnelle.</p>
             </div>
             <div class="service-img">
-                <img src="../img/service3.jpg" alt="Presso Thérapie">
+                <img src="../img/service3.jpg" alt="Soins hydra-faciaux">
             </div>
         </section>
   </main>
 
     </body>
-
+    <script src="../js/scripts.js"></script>
 </html>
 
 </x-app-layout>

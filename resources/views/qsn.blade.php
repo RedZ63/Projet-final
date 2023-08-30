@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Nos services</title>
+    <title>Qui sommes-nous ?</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -16,13 +16,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
         rel="stylesheet" />
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <meta name="description" content="En savoir plus sur White Beauty - votre partenaire de confiance pour le blanchiment dentaire et la presso-thérapie. Explorez notre engagement à révéler votre beauté intérieure et extérieure à travers nos soins hydra-faciaux et nos services exceptionnels.">
 
 
     <!-- Styles -->
 
 </head>
 <x-app-layout>
-
+<div class="loader-container">
+    <div class="spinner"></div>
+    <img src="../img/loader.gif" class="logo" alt="Logo">
+</div>
 <body>
 
 <div class="hero2">
@@ -44,7 +48,7 @@
                 répondre à toutes vos attentes en matière de beauté et de bien-être.</p>
         </div>
         <div class="qsn_1_image">
-            <img src="{{ url('/img/Service1.jpg') }}" alt="Image 1">
+            <img src="{{ url('/img/Service1.jpg') }}" alt="Image service">
         </div>
         
     </div>
@@ -58,7 +62,7 @@
             </p>
         </div>
         <div class="qsn_2_image">
-            <img src="{{ url('/img/Logo3.png') }}" alt="Image 2" class="logo3">
+            <img src="{{ url('/img/Logo3.png') }}" alt="Image service" class="logo3">
         </div>
     </div>
 
@@ -82,7 +86,15 @@
             <p class="qsn_bandeau_texte">+ 40 avis google</p>
         </div>
     </div>
+
+    <div id="avantage">
+        <h1 class="titre_qsn" >Vos avantages</h1>
+        <p class="texte_qsn">La fidélité récompensée. <br/>Au bout de dix visites, nous vous accordons 25% de réduction sur votre prochain soin. 
+            Profitez de cette avantage pour découvrir nos massages hydra-faciaux ou même l'offrir à un proche ! N'hésitez pas à demander plus amples renseignements en salon. 
+        </p>
+    </div>
 </main>
+<script src="../js/scripts.js"></script>
 </body>
 
 </html>

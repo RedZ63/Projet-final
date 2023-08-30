@@ -1,8 +1,14 @@
-<x-app-layout>
+    <head><meta name="description" content=" Restez à jour avec les dernières nouvelles et mises à jour de White Beauty. Explorez nos articles et informations sur le blanchiment dentaire, la presso-thérapie, les soins hydra-faciaux et bien plus encore pour briller de l'intérieur vers l'extérieur.">
+    </head>
+<div>
+    <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold mt-32 text-center">{{ $post->title }}</h2>
     </x-slot>
-
+    <div class="loader-container">
+    <div class="spinner"></div>
+    <img src="../img/loader.gif" class="logo" alt="Logo">
+</div>
     <div class="mx-auto max-w-3xl">
         <img src="{{ asset('/storage/' . $post->image) }}" alt="{{ $post->title }}" class="w-full h-64 object-cover object-center rounded-md shadow-lg mb-4">
         <div class="bg-white rounded-md shadow-md p-6">
@@ -72,5 +78,6 @@
                 </div>
             @endforeach
         </div>
+        <script src="../js/scripts.js"></script>
 </x-app-layout>
 @include('layouts.footer')

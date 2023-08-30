@@ -7,8 +7,12 @@
     <title>Contact</title>
     <!-- Styles -->
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <meta name="description" content=" Contactez White Beauty pour transformer votre sourire et revitaliser votre peau. Prenez rendez-vous pour nos services de blanchiment dentaire, presso-thérapie et soins hydra-faciaux. Révélez votre éclat naturel dès aujourd'hui.">
 </head>
-
+<div class="loader-container">
+    <div class="spinner"></div>
+    <img src="../img/loader.gif" class="logo" alt="Logo">
+</div>
 <body>
 
     <x-app-layout>
@@ -81,7 +85,7 @@
 
     </x-app-layout>
     @include('layouts.footer')
-
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>

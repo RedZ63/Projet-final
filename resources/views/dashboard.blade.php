@@ -4,7 +4,10 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
+    <div class="loader-container">
+    <div class="spinner"></div>
+    <img src="../img/loader.gif" class="logo" alt="Logo">
+    </div>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
@@ -30,5 +33,6 @@
 
         </div>
     </div>
+    <script src="../js/scripts.js"></script>
 </x-app-layout>
 @include('layouts.footer')
