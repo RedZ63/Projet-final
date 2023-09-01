@@ -1,8 +1,4 @@
-<x-app-layout >
-<div class="loader-container">
-    <div class="spinner"></div>
-    <img src="./public/img/Logo.png" class="logo" alt="Logo">
-</div>
+<x-app-layout>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:mx-auto">
         <form method="POST" action="{{ route('comments.update', $comment) }}" style="margin-top: 10rem;">
             @csrf
@@ -19,5 +15,4 @@
             </div>
         </form>
     </div>
-    <script src="../js/scripts.js"></script>    
-</x-app-layout>
+</x-app-layout> 

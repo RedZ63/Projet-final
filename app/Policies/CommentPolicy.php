@@ -37,7 +37,7 @@ class CommentPolicy
     /**
      * Déterminer si l'utilisateur peut mettre à jour le modèle.
      */
-    public function update(User $user,Comment $comment): boolùm
+    public function update(User $user,Comment $comment): bool
     {
         return $comment->user()->is($user);
 
